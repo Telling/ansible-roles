@@ -2,4 +2,6 @@
 - include_tasks: "grafana.yml"
 - include_tasks: "syslog.yml"
 - include_tasks: "newsyslog.yml"
+- include_tasks: "grafana-plugins.yml"
+  when: grafana_plugins is defined
 

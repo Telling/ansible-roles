@@ -1,0 +1,7 @@
+---
+- name: Install grafana plugins
+  grafana_plugin:
+    name: "{{ item.name }}"
+    version: "{{ item.version | d('latest') }}"
+    state: present
+  loop: "{{ grafana_plugins }}"
